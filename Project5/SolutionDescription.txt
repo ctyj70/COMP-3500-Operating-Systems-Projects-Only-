@@ -1,0 +1,36 @@
+Chris Cj Young
+cty0008
+COMP 3500 Project 5
+
+
+7.1 (6 points) Solution Description
+
+(1) How did you separate scheduling mechanism from scheduling policies?
+- I used a function called Task_Manager to select a scheduling policy to run based on user input
+(2) How did implement the three scheduling algorithms?
+- The three algorithms are implemented in different functions in the code so they can be called independently based on user input.
+(3) How did you calculate waiting times?
+- by subtracting the arrival time and burst time (both in the input file) from the finish time, determined from the algorithms running.
+(4) How did you calculate response times?
+- subtracting the arrival time in the input file from the start time which is determined during the algorithm running.
+(5) How did you calculate turnaround times?
+- subtracting the finish time found during runtime from the arrival time (from in the input file).
+(6) How did you implement the command-line parser?
+- Similar to the example input.c file, I used int argc and char *argv[] to pass a certain number of command line arguments into the main method of the code. I then found if the arguments were valid, then ran the program.
+
+7.2 (6 points) Generality and Error Checking
+
+(1) How general is your solution?
+- Fairly general I believe, while also following the requirements given by this assignment. I made sure it could run by implementing various inputs of variable length by using the 3 scheduling policies
+(2) How easy would it be to add a new scheduling policy into your scheduler?
+- Fairly simple, since each policy is encased in its own method. Adding another would mean to add the method and adding it to the Task_Manager method.
+(3) Does your program offer input error checking?
+- Yes, the main method determines if the right number of arguments are given for the program, and Task_Manager verifies that the policy received in the input is one of the 3 implemented policies.
+
+7.3 (3 points) Miscellaneous factors
+(1) Is your code elegant?
+- i tried to make it as readable as possible, commenting for describing methods/loops/variable names, and easy-to-remember variable names
+(2) How innovative is your solution? Did you try any ideas not suggested here?
+- I believe I made it innovative enough so that it isn't too complicated.
+(3) Did you document all outside sources?
+- Yes, as I used W3 Schools to refresh my memory on C syntax and documentation.
